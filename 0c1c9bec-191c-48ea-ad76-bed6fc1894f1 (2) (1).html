@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>American Sound — 250 Years of American Music</title>
+
+<!-- ========================================================================
+     QR CODE LIBRARY (loaded from the web). For a fully OFFLINE kiosk, download
+     this file and the Google Fonts below, then point these tags at local copies.
+     ===================================================================== -->
+<!-- QR CODE LIBRARY (qrcodejs 1.0.0) embedded inline so the kiosk works FULLY OFFLINE -->
+<script>
+var QRCode;!function(){function a(a){this.mode=c.MODE_8BIT_BYTE,this.data=a,this.parsedData=[];for(var b=[],d=0,e=this.data.length;e>d;d++){var f=this.data.charCodeAt(d);f>65536?(b[0]=240|(1835008&f)>>>18,b[1]=128|(258048&f)>>>12,b[2]=128|(4032&f)>>>6,b[3]=128|63&f):f>2048?(b[0]=224|(61440&f)>>>12,b[1]=128|(4032&f)>>>6,b[2]=128|63&f):f>128?(b[0]=192|(1984&f)>>>6,b[1]=128|63&f):b[0]=f,this.parsedData=this.parsedData.concat(b)}this.parsedData.length!=this.data.length&&(this.parsedData.unshift(191),this.parsedData.unshift(187),this.parsedData.unshift(239))}function b(a,b){this.typeNumber=a,this.errorCorrectLevel=b,this.modules=null,this.moduleCount=0,this.dataCache=null,this.dataList=[]}function i(a,b){if(void 0==a.length)throw new Error(a.length+"/"+b);for(var c=0;c<a.length&&0==a[c];)c++;this.num=new Array(a.length-c+b);for(var d=0;d<a.length-c;d++)this.num[d]=a[d+c]}function j(a,b){this.totalCount=a,this.dataCount=b}function k(){this.buffer=[],this.length=0}function m(){return"undefined"!=typeof CanvasRenderingContext2D}function n(){var a=!1,b=navigator.userAgent;return/android/i.test(b)&&(a=!0,aMat=b.toString().match(/android ([0-9]\.[0-9])/i),aMat&&aMat[1]&&(a=parseFloat(aMat[1]))),a}function r(a,b){for(var c=1,e=s(a),f=0,g=l.length;g>=f;f++){var h=0;switch(b){case d.L:h=l[f][0];break;case d.M:h=l[f][1];break;case d.Q:h=l[f][2];break;case d.H:h=l[f][3]}if(h>=e)break;c++}if(c>l.length)throw new Error("Too long data");return c}function s(a){var b=encodeURI(a).toString().replace(/\%[0-9a-fA-F]{2}/g,"a");return b.length+(b.length!=a?3:0)}a.prototype={getLength:function(){return this.parsedData.length},write:function(a){for(var b=0,c=this.parsedData.length;c>b;b++)a.put(this.parsedData[b],8)}},b.prototype={addData:function(b){var c=new a(b);this.dataList.push(c),this.dataCache=null},isDark:function(a,b){if(0>a||this.moduleCount<=a||0>b||this.moduleCount<=b)throw new Error(a+","+b);return this.modules[a][b]},getModuleCount:function(){return this.moduleCount},make:function(){this.makeImpl(!1,this.getBestMaskPattern())},makeImpl:function(a,c){this.moduleCount=4*this.typeNumber+17,this.modules=new Array(this.moduleCount);for(var d=0;d<this.moduleCount;d++){this.modules[d]=new Array(this.moduleCount);for(var e=0;e<this.moduleCount;e++)this.modules[d][e]=null}this.setupPositionProbePattern(0,0),this.setupPositionProbePattern(this.moduleCount-7,0),this.setupPositionProbePattern(0,this.moduleCount-7),this.setupPositionAdjustPattern(),this.setupTimingPattern(),this.setupTypeInfo(a,c),this.typeNumber>=7&&this.setupTypeNumber(a),null==this.dataCache&&(this.dataCache=b.createData(this.typeNumber,this.errorCorrectLevel,this.dataList)),this.mapData(this.dataCache,c)},setupPositionProbePattern:function(a,b){for(var c=-1;7>=c;c++)if(!(-1>=a+c||this.moduleCount<=a+c))for(var d=-1;7>=d;d++)-1>=b+d||this.moduleCount<=b+d||(this.modules[a+c][b+d]=c>=0&&6>=c&&(0==d||6==d)||d>=0&&6>=d&&(0==c||6==c)||c>=2&&4>=c&&d>=2&&4>=d?!0:!1)},getBestMaskPattern:function(){for(var a=0,b=0,c=0;8>c;c++){this.makeImpl(!0,c);var d=f.getLostPoint(this);(0==c||a>d)&&(a=d,b=c)}return b},createMovieClip:function(a,b,c){var d=a.createEmptyMovieClip(b,c),e=1;this.make();for(var f=0;f<this.modules.length;f++)for(var g=f*e,h=0;h<this.modules[f].length;h++){var i=h*e,j=this.modules[f][h];j&&(d.beginFill(0,100),d.moveTo(i,g),d.lineTo(i+e,g),d.lineTo(i+e,g+e),d.lineTo(i,g+e),d.endFill())}return d},setupTimingPattern:function(){for(var a=8;a<this.moduleCount-8;a++)null==this.modules[a][6]&&(this.modules[a][6]=0==a%2);for(var b=8;b<this.moduleCount-8;b++)null==this.modules[6][b]&&(this.modules[6][b]=0==b%2)},setupPositionAdjustPattern:function(){for(var a=f.getPatternPosition(this.typeNumber),b=0;b<a.length;b++)for(var c=0;c<a.length;c++){var d=a[b],e=a[c];if(null==this.modules[d][e])for(var g=-2;2>=g;g++)for(var h=-2;2>=h;h++)this.modules[d+g][e+h]=-2==g||2==g||-2==h||2==h||0==g&&0==h?!0:!1}},setupTypeNumber:function(a){for(var b=f.getBCHTypeNumber(this.typeNumber),c=0;18>c;c++){var d=!a&&1==(1&b>>c);this.modules[Math.floor(c/3)][c%3+this.moduleCount-8-3]=d}for(var c=0;18>c;c++){var d=!a&&1==(1&b>>c);this.modules[c%3+this.moduleCount-8-3][Math.floor(c/3)]=d}},setupTypeInfo:function(a,b){for(var c=this.errorCorrectLevel<<3|b,d=f.getBCHTypeInfo(c),e=0;15>e;e++){var g=!a&&1==(1&d>>e);6>e?this.modules[e][8]=g:8>e?this.modules[e+1][8]=g:this.modules[this.moduleCount-15+e][8]=g}for(var e=0;15>e;e++){var g=!a&&1==(1&d>>e);8>e?this.modules[8][this.moduleCount-e-1]=g:9>e?this.modules[8][15-e-1+1]=g:this.modules[8][15-e-1]=g}this.modules[this.moduleCount-8][8]=!a},mapData:function(a,b){for(var c=-1,d=this.moduleCount-1,e=7,g=0,h=this.moduleCount-1;h>0;h-=2)for(6==h&&h--;;){for(var i=0;2>i;i++)if(null==this.modules[d][h-i]){var j=!1;g<a.length&&(j=1==(1&a[g]>>>e));var k=f.getMask(b,d,h-i);k&&(j=!j),this.modules[d][h-i]=j,e--,-1==e&&(g++,e=7)}if(d+=c,0>d||this.moduleCount<=d){d-=c,c=-c;break}}}},b.PAD0=236,b.PAD1=17,b.createData=function(a,c,d){for(var e=j.getRSBlocks(a,c),g=new k,h=0;h<d.length;h++){var i=d[h];g.put(i.mode,4),g.put(i.getLength(),f.getLengthInBits(i.mode,a)),i.write(g)}for(var l=0,h=0;h<e.length;h++)l+=e[h].dataCount;if(g.getLengthInBits()>8*l)throw new Error("code length overflow. ("+g.getLengthInBits()+">"+8*l+")");for(g.getLengthInBits()+4<=8*l&&g.put(0,4);0!=g.getLengthInBits()%8;)g.putBit(!1);for(;;){if(g.getLengthInBits()>=8*l)break;if(g.put(b.PAD0,8),g.getLengthInBits()>=8*l)break;g.put(b.PAD1,8)}return b.createBytes(g,e)},b.createBytes=function(a,b){for(var c=0,d=0,e=0,g=new Array(b.length),h=new Array(b.length),j=0;j<b.length;j++){var k=b[j].dataCount,l=b[j].totalCount-k;d=Math.max(d,k),e=Math.max(e,l),g[j]=new Array(k);for(var m=0;m<g[j].length;m++)g[j][m]=255&a.buffer[m+c];c+=k;var n=f.getErrorCorrectPolynomial(l),o=new i(g[j],n.getLength()-1),p=o.mod(n);h[j]=new Array(n.getLength()-1);for(var m=0;m<h[j].length;m++){var q=m+p.getLength()-h[j].length;h[j][m]=q>=0?p.get(q):0}}for(var r=0,m=0;m<b.length;m++)r+=b[m].totalCount;for(var s=new Array(r),t=0,m=0;d>m;m++)for(var j=0;j<b.length;j++)m<g[j].length&&(s[t++]=g[j][m]);for(var m=0;e>m;m++)for(var j=0;j<b.length;j++)m<h[j].length&&(s[t++]=h[j][m]);return s};for(var c={MODE_NUMBER:1,MODE_ALPHA_NUM:2,MODE_8BIT_BYTE:4,MODE_KANJI:8},d={L:1,M:0,Q:3,H:2},e={PATTERN000:0,PATTERN001:1,PATTERN010:2,PATTERN011:3,PATTERN100:4,PATTERN101:5,PATTERN110:6,PATTERN111:7},f={PATTERN_POSITION_TABLE:[[],[6,18],[6,22],[6,26],[6,30],[6,34],[6,22,38],[6,24,42],[6,26,46],[6,28,50],[6,30,54],[6,32,58],[6,34,62],[6,26,46,66],[6,26,48,70],[6,26,50,74],[6,30,54,78],[6,30,56,82],[6,30,58,86],[6,34,62,90],[6,28,50,72,94],[6,26,50,74,98],[6,30,54,78,102],[6,28,54,80,106],[6,32,58,84,110],[6,30,58,86,114],[6,34,62,90,118],[6,26,50,74,98,122],[6,30,54,78,102,126],[6,26,52,78,104,130],[6,30,56,82,108,134],[6,34,60,86,112,138],[6,30,58,86,114,142],[6,34,62,90,118,146],[6,30,54,78,102,126,150],[6,24,50,76,102,128,154],[6,28,54,80,106,132,158],[6,32,58,84,110,136,162],[6,26,54,82,110,138,166],[6,30,58,86,114,142,170]],G15:1335,G18:7973,G15_MASK:21522,getBCHTypeInfo:function(a){for(var b=a<<10;f.getBCHDigit(b)-f.getBCHDigit(f.G15)>=0;)b^=f.G15<<f.getBCHDigit(b)-f.getBCHDigit(f.G15);return(a<<10|b)^f.G15_MASK},getBCHTypeNumber:function(a){for(var b=a<<12;f.getBCHDigit(b)-f.getBCHDigit(f.G18)>=0;)b^=f.G18<<f.getBCHDigit(b)-f.getBCHDigit(f.G18);return a<<12|b},getBCHDigit:function(a){for(var b=0;0!=a;)b++,a>>>=1;return b},getPatternPosition:function(a){return f.PATTERN_POSITION_TABLE[a-1]},getMask:function(a,b,c){switch(a){case e.PATTERN000:return 0==(b+c)%2;case e.PATTERN001:return 0==b%2;case e.PATTERN010:return 0==c%3;case e.PATTERN011:return 0==(b+c)%3;case e.PATTERN100:return 0==(Math.floor(b/2)+Math.floor(c/3))%2;case e.PATTERN101:return 0==b*c%2+b*c%3;case e.PATTERN110:return 0==(b*c%2+b*c%3)%2;case e.PATTERN111:return 0==(b*c%3+(b+c)%2)%2;default:throw new Error("bad maskPattern:"+a)}},getErrorCorrectPolynomial:function(a){for(var b=new i([1],0),c=0;a>c;c++)b=b.multiply(new i([1,g.gexp(c)],0));return b},getLengthInBits:function(a,b){if(b>=1&&10>b)switch(a){case c.MODE_NUMBER:return 10;case c.MODE_ALPHA_NUM:return 9;case c.MODE_8BIT_BYTE:return 8;case c.MODE_KANJI:return 8;default:throw new Error("mode:"+a)}else if(27>b)switch(a){case c.MODE_NUMBER:return 12;case c.MODE_ALPHA_NUM:return 11;case c.MODE_8BIT_BYTE:return 16;case c.MODE_KANJI:return 10;default:throw new Error("mode:"+a)}else{if(!(41>b))throw new Error("type:"+b);switch(a){case c.MODE_NUMBER:return 14;case c.MODE_ALPHA_NUM:return 13;case c.MODE_8BIT_BYTE:return 16;case c.MODE_KANJI:return 12;default:throw new Error("mode:"+a)}}},getLostPoint:function(a){for(var b=a.getModuleCount(),c=0,d=0;b>d;d++)for(var e=0;b>e;e++){for(var f=0,g=a.isDark(d,e),h=-1;1>=h;h++)if(!(0>d+h||d+h>=b))for(var i=-1;1>=i;i++)0>e+i||e+i>=b||(0!=h||0!=i)&&g==a.isDark(d+h,e+i)&&f++;f>5&&(c+=3+f-5)}for(var d=0;b-1>d;d++)for(var e=0;b-1>e;e++){var j=0;a.isDark(d,e)&&j++,a.isDark(d+1,e)&&j++,a.isDark(d,e+1)&&j++,a.isDark(d+1,e+1)&&j++,(0==j||4==j)&&(c+=3)}for(var d=0;b>d;d++)for(var e=0;b-6>e;e++)a.isDark(d,e)&&!a.isDark(d,e+1)&&a.isDark(d,e+2)&&a.isDark(d,e+3)&&a.isDark(d,e+4)&&!a.isDark(d,e+5)&&a.isDark(d,e+6)&&(c+=40);for(var e=0;b>e;e++)for(var d=0;b-6>d;d++)a.isDark(d,e)&&!a.isDark(d+1,e)&&a.isDark(d+2,e)&&a.isDark(d+3,e)&&a.isDark(d+4,e)&&!a.isDark(d+5,e)&&a.isDark(d+6,e)&&(c+=40);for(var k=0,e=0;b>e;e++)for(var d=0;b>d;d++)a.isDark(d,e)&&k++;var l=Math.abs(100*k/b/b-50)/5;return c+=10*l}},g={glog:function(a){if(1>a)throw new Error("glog("+a+")");return g.LOG_TABLE[a]},gexp:function(a){for(;0>a;)a+=255;for(;a>=256;)a-=255;return g.EXP_TABLE[a]},EXP_TABLE:new Array(256),LOG_TABLE:new Array(256)},h=0;8>h;h++)g.EXP_TABLE[h]=1<<h;for(var h=8;256>h;h++)g.EXP_TABLE[h]=g.EXP_TABLE[h-4]^g.EXP_TABLE[h-5]^g.EXP_TABLE[h-6]^g.EXP_TABLE[h-8];for(var h=0;255>h;h++)g.LOG_TABLE[g.EXP_TABLE[h]]=h;i.prototype={get:function(a){return this.num[a]},getLength:function(){return this.num.length},multiply:function(a){for(var b=new Array(this.getLength()+a.getLength()-1),c=0;c<this.getLength();c++)for(var d=0;d<a.getLength();d++)b[c+d]^=g.gexp(g.glog(this.get(c))+g.glog(a.get(d)));return new i(b,0)},mod:function(a){if(this.getLength()-a.getLength()<0)return this;for(var b=g.glog(this.get(0))-g.glog(a.get(0)),c=new Array(this.getLength()),d=0;d<this.getLength();d++)c[d]=this.get(d);for(var d=0;d<a.getLength();d++)c[d]^=g.gexp(g.glog(a.get(d))+b);return new i(c,0).mod(a)}},j.RS_BLOCK_TABLE=[[1,26,19],[1,26,16],[1,26,13],[1,26,9],[1,44,34],[1,44,28],[1,44,22],[1,44,16],[1,70,55],[1,70,44],[2,35,17],[2,35,13],[1,100,80],[2,50,32],[2,50,24],[4,25,9],[1,134,108],[2,67,43],[2,33,15,2,34,16],[2,33,11,2,34,12],[2,86,68],[4,43,27],[4,43,19],[4,43,15],[2,98,78],[4,49,31],[2,32,14,4,33,15],[4,39,13,1,40,14],[2,121,97],[2,60,38,2,61,39],[4,40,18,2,41,19],[4,40,14,2,41,15],[2,146,116],[3,58,36,2,59,37],[4,36,16,4,37,17],[4,36,12,4,37,13],[2,86,68,2,87,69],[4,69,43,1,70,44],[6,43,19,2,44,20],[6,43,15,2,44,16],[4,101,81],[1,80,50,4,81,51],[4,50,22,4,51,23],[3,36,12,8,37,13],[2,116,92,2,117,93],[6,58,36,2,59,37],[4,46,20,6,47,21],[7,42,14,4,43,15],[4,133,107],[8,59,37,1,60,38],[8,44,20,4,45,21],[12,33,11,4,34,12],[3,145,115,1,146,116],[4,64,40,5,65,41],[11,36,16,5,37,17],[11,36,12,5,37,13],[5,109,87,1,110,88],[5,65,41,5,66,42],[5,54,24,7,55,25],[11,36,12],[5,122,98,1,123,99],[7,73,45,3,74,46],[15,43,19,2,44,20],[3,45,15,13,46,16],[1,135,107,5,136,108],[10,74,46,1,75,47],[1,50,22,15,51,23],[2,42,14,17,43,15],[5,150,120,1,151,121],[9,69,43,4,70,44],[17,50,22,1,51,23],[2,42,14,19,43,15],[3,141,113,4,142,114],[3,70,44,11,71,45],[17,47,21,4,48,22],[9,39,13,16,40,14],[3,135,107,5,136,108],[3,67,41,13,68,42],[15,54,24,5,55,25],[15,43,15,10,44,16],[4,144,116,4,145,117],[17,68,42],[17,50,22,6,51,23],[19,46,16,6,47,17],[2,139,111,7,140,112],[17,74,46],[7,54,24,16,55,25],[34,37,13],[4,151,121,5,152,122],[4,75,47,14,76,48],[11,54,24,14,55,25],[16,45,15,14,46,16],[6,147,117,4,148,118],[6,73,45,14,74,46],[11,54,24,16,55,25],[30,46,16,2,47,17],[8,132,106,4,133,107],[8,75,47,13,76,48],[7,54,24,22,55,25],[22,45,15,13,46,16],[10,142,114,2,143,115],[19,74,46,4,75,47],[28,50,22,6,51,23],[33,46,16,4,47,17],[8,152,122,4,153,123],[22,73,45,3,74,46],[8,53,23,26,54,24],[12,45,15,28,46,16],[3,147,117,10,148,118],[3,73,45,23,74,46],[4,54,24,31,55,25],[11,45,15,31,46,16],[7,146,116,7,147,117],[21,73,45,7,74,46],[1,53,23,37,54,24],[19,45,15,26,46,16],[5,145,115,10,146,116],[19,75,47,10,76,48],[15,54,24,25,55,25],[23,45,15,25,46,16],[13,145,115,3,146,116],[2,74,46,29,75,47],[42,54,24,1,55,25],[23,45,15,28,46,16],[17,145,115],[10,74,46,23,75,47],[10,54,24,35,55,25],[19,45,15,35,46,16],[17,145,115,1,146,116],[14,74,46,21,75,47],[29,54,24,19,55,25],[11,45,15,46,46,16],[13,145,115,6,146,116],[14,74,46,23,75,47],[44,54,24,7,55,25],[59,46,16,1,47,17],[12,151,121,7,152,122],[12,75,47,26,76,48],[39,54,24,14,55,25],[22,45,15,41,46,16],[6,151,121,14,152,122],[6,75,47,34,76,48],[46,54,24,10,55,25],[2,45,15,64,46,16],[17,152,122,4,153,123],[29,74,46,14,75,47],[49,54,24,10,55,25],[24,45,15,46,46,16],[4,152,122,18,153,123],[13,74,46,32,75,47],[48,54,24,14,55,25],[42,45,15,32,46,16],[20,147,117,4,148,118],[40,75,47,7,76,48],[43,54,24,22,55,25],[10,45,15,67,46,16],[19,148,118,6,149,119],[18,75,47,31,76,48],[34,54,24,34,55,25],[20,45,15,61,46,16]],j.getRSBlocks=function(a,b){var c=j.getRsBlockTable(a,b);if(void 0==c)throw new Error("bad rs block @ typeNumber:"+a+"/errorCorrectLevel:"+b);for(var d=c.length/3,e=[],f=0;d>f;f++)for(var g=c[3*f+0],h=c[3*f+1],i=c[3*f+2],k=0;g>k;k++)e.push(new j(h,i));return e},j.getRsBlockTable=function(a,b){switch(b){case d.L:return j.RS_BLOCK_TABLE[4*(a-1)+0];case d.M:return j.RS_BLOCK_TABLE[4*(a-1)+1];case d.Q:return j.RS_BLOCK_TABLE[4*(a-1)+2];case d.H:return j.RS_BLOCK_TABLE[4*(a-1)+3];default:return void 0}},k.prototype={get:function(a){var b=Math.floor(a/8);return 1==(1&this.buffer[b]>>>7-a%8)},put:function(a,b){for(var c=0;b>c;c++)this.putBit(1==(1&a>>>b-c-1))},getLengthInBits:function(){return this.length},putBit:function(a){var b=Math.floor(this.length/8);this.buffer.length<=b&&this.buffer.push(0),a&&(this.buffer[b]|=128>>>this.length%8),this.length++}};var l=[[17,14,11,7],[32,26,20,14],[53,42,32,24],[78,62,46,34],[106,84,60,44],[134,106,74,58],[154,122,86,64],[192,152,108,84],[230,180,130,98],[271,213,151,119],[321,251,177,137],[367,287,203,155],[425,331,241,177],[458,362,258,194],[520,412,292,220],[586,450,322,250],[644,504,364,280],[718,560,394,310],[792,624,442,338],[858,666,482,382],[929,711,509,403],[1003,779,565,439],[1091,857,611,461],[1171,911,661,511],[1273,997,715,535],[1367,1059,751,593],[1465,1125,805,625],[1528,1190,868,658],[1628,1264,908,698],[1732,1370,982,742],[1840,1452,1030,790],[1952,1538,1112,842],[2068,1628,1168,898],[2188,1722,1228,958],[2303,1809,1283,983],[2431,1911,1351,1051],[2563,1989,1423,1093],[2699,2099,1499,1139],[2809,2213,1579,1219],[2953,2331,1663,1273]],o=function(){var a=function(a,b){this._el=a,this._htOption=b};return a.prototype.draw=function(a){function g(a,b){var c=document.createElementNS("http://www.w3.org/2000/svg",a);for(var d in b)b.hasOwnProperty(d)&&c.setAttribute(d,b[d]);return c}var b=this._htOption,c=this._el,d=a.getModuleCount();Math.floor(b.width/d),Math.floor(b.height/d),this.clear();var h=g("svg",{viewBox:"0 0 "+String(d)+" "+String(d),width:"100%",height:"100%",fill:b.colorLight});h.setAttributeNS("http://www.w3.org/2000/xmlns/","xmlns:xlink","http://www.w3.org/1999/xlink"),c.appendChild(h),h.appendChild(g("rect",{fill:b.colorDark,width:"1",height:"1",id:"template"}));for(var i=0;d>i;i++)for(var j=0;d>j;j++)if(a.isDark(i,j)){var k=g("use",{x:String(i),y:String(j)});k.setAttributeNS("http://www.w3.org/1999/xlink","href","#template"),h.appendChild(k)}},a.prototype.clear=function(){for(;this._el.hasChildNodes();)this._el.removeChild(this._el.lastChild)},a}(),p="svg"===document.documentElement.tagName.toLowerCase(),q=p?o:m()?function(){function a(){this._elImage.src=this._elCanvas.toDataURL("image/png"),this._elImage.style.display="block",this._elCanvas.style.display="none"}function d(a,b){var c=this;if(c._fFail=b,c._fSuccess=a,null===c._bSupportDataURI){var d=document.createElement("img"),e=function(){c._bSupportDataURI=!1,c._fFail&&_fFail.call(c)},f=function(){c._bSupportDataURI=!0,c._fSuccess&&c._fSuccess.call(c)};return d.onabort=e,d.onerror=e,d.onload=f,d.src="data:image/gif;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAHElEQVQI12P4//8/w38GIAXDIBKE0DHxgljNBAAO9TXL0Y4OHwAAAABJRU5ErkJggg==",void 0}c._bSupportDataURI===!0&&c._fSuccess?c._fSuccess.call(c):c._bSupportDataURI===!1&&c._fFail&&c._fFail.call(c)}if(this._android&&this._android<=2.1){var b=1/window.devicePixelRatio,c=CanvasRenderingContext2D.prototype.drawImage;CanvasRenderingContext2D.prototype.drawImage=function(a,d,e,f,g,h,i,j){if("nodeName"in a&&/img/i.test(a.nodeName))for(var l=arguments.length-1;l>=1;l--)arguments[l]=arguments[l]*b;else"undefined"==typeof j&&(arguments[1]*=b,arguments[2]*=b,arguments[3]*=b,arguments[4]*=b);c.apply(this,arguments)}}var e=function(a,b){this._bIsPainted=!1,this._android=n(),this._htOption=b,this._elCanvas=document.createElement("canvas"),this._elCanvas.width=b.width,this._elCanvas.height=b.height,a.appendChild(this._elCanvas),this._el=a,this._oContext=this._elCanvas.getContext("2d"),this._bIsPainted=!1,this._elImage=document.createElement("img"),this._elImage.style.display="none",this._el.appendChild(this._elImage),this._bSupportDataURI=null};return e.prototype.draw=function(a){var b=this._elImage,c=this._oContext,d=this._htOption,e=a.getModuleCount(),f=d.width/e,g=d.height/e,h=Math.round(f),i=Math.round(g);b.style.display="none",this.clear();for(var j=0;e>j;j++)for(var k=0;e>k;k++){var l=a.isDark(j,k),m=k*f,n=j*g;c.strokeStyle=l?d.colorDark:d.colorLight,c.lineWidth=1,c.fillStyle=l?d.colorDark:d.colorLight,c.fillRect(m,n,f,g),c.strokeRect(Math.floor(m)+.5,Math.floor(n)+.5,h,i),c.strokeRect(Math.ceil(m)-.5,Math.ceil(n)-.5,h,i)}this._bIsPainted=!0},e.prototype.makeImage=function(){this._bIsPainted&&d.call(this,a)},e.prototype.isPainted=function(){return this._bIsPainted},e.prototype.clear=function(){this._oContext.clearRect(0,0,this._elCanvas.width,this._elCanvas.height),this._bIsPainted=!1},e.prototype.round=function(a){return a?Math.floor(1e3*a)/1e3:a},e}():function(){var a=function(a,b){this._el=a,this._htOption=b};return a.prototype.draw=function(a){for(var b=this._htOption,c=this._el,d=a.getModuleCount(),e=Math.floor(b.width/d),f=Math.floor(b.height/d),g=['<table style="border:0;border-collapse:collapse;">'],h=0;d>h;h++){g.push("<tr>");for(var i=0;d>i;i++)g.push('<td style="border:0;border-collapse:collapse;padding:0;margin:0;width:'+e+"px;height:"+f+"px;background-color:"+(a.isDark(h,i)?b.colorDark:b.colorLight)+';"></td>');g.push("</tr>")}g.push("</table>"),c.innerHTML=g.join("");var j=c.childNodes[0],k=(b.width-j.offsetWidth)/2,l=(b.height-j.offsetHeight)/2;k>0&&l>0&&(j.style.margin=l+"px "+k+"px")},a.prototype.clear=function(){this._el.innerHTML=""},a}();QRCode=function(a,b){if(this._htOption={width:256,height:256,typeNumber:4,colorDark:"#000000",colorLight:"#ffffff",correctLevel:d.H},"string"==typeof b&&(b={text:b}),b)for(var c in b)this._htOption[c]=b[c];"string"==typeof a&&(a=document.getElementById(a)),this._android=n(),this._el=a,this._oQRCode=null,this._oDrawing=new q(this._el,this._htOption),this._htOption.text&&this.makeCode(this._htOption.text)},QRCode.prototype.makeCode=function(a){this._oQRCode=new b(r(a,this._htOption.correctLevel),this._htOption.correctLevel),this._oQRCode.addData(a),this._oQRCode.make(),this._el.title=a,this._oDrawing.draw(this._oQRCode),this.makeImage()},QRCode.prototype.makeImage=function(){"function"==typeof this._oDrawing.makeImage&&(!this._android||this._android>=3)&&this._oDrawing.makeImage()},QRCode.prototype.clear=function(){this._oDrawing.clear()},QRCode.CorrectLevel=d}();
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&family=Frank+Ruhl+Libre:wght@400;700;900&family=Heebo:wght@400;500;700&family=Cairo:wght@400;600;700;900&display=swap" rel="stylesheet">
+
+<style>
+/* ===========================================================================
+   THEME
+   =========================================================================== */
+:root{
+  --ink:#16110c;
+  --ink-2:#1f1812;
+  --surface:#27201a;
+  --surface-2:#322920;
+  --line:#473a2c;
+  --cream:#f5ecd9;
+  --cream-dim:#cdbfa6;
+  --muted:#9c8d76;
+  --amber:#f0b04a;
+  --amber-deep:#d98e2b;
+  --red:#d4503f;
+  --glow:rgba(240,176,74,.16);
+  --shadow:0 18px 50px -12px rgba(0,0,0,.7);
+  --font-display:"Fraunces",Georgia,serif;
+  --font-body:"Hanken Grotesk",system-ui,sans-serif;
+  --font-mono:"Space Mono",ui-monospace,monospace;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{height:100%;overflow:hidden}
+body{
+  font-family:var(--font-body);
+  background:var(--ink);
+  color:var(--cream);
+  -webkit-font-smoothing:antialiased;
+  -webkit-tap-highlight-color:transparent;
+  user-select:none;
+}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+
+/* film grain + ambient glow over everything */
+body::before{
+  content:"";position:fixed;inset:0;z-index:9999;pointer-events:none;opacity:.045;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+body::after{
+  content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(120% 80% at 50% -10%, var(--glow), transparent 60%);
+}
+
+#app{position:relative;z-index:1;height:100%;width:100%}
+.screen{position:absolute;inset:0;display:flex;flex-direction:column;
+  opacity:0;visibility:hidden;transition:opacity .5s ease;}
+.screen.active{opacity:1;visibility:visible}
+
+/* ===========================================================================
+   SHARED BITS
+   =========================================================================== */
+.label{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.22em;
+  font-size:.66rem;color:var(--amber);}
+.eq{display:inline-flex;gap:3px;align-items:flex-end;height:18px}
+.eq span{width:3px;background:var(--amber);border-radius:2px;animation:eq 1s ease-in-out infinite}
+.eq span:nth-child(2){animation-delay:.2s}
+.eq span:nth-child(3){animation-delay:.45s}
+.eq span:nth-child(4){animation-delay:.15s}
+.eq span:nth-child(5){animation-delay:.55s}
+@keyframes eq{0%,100%{height:4px}50%{height:18px}}
+
+.btn{
+  display:inline-flex;align-items:center;gap:.6em;justify-content:center;
+  background:var(--amber);color:#2a1c08;font-weight:700;font-size:1.05rem;
+  padding:.95em 1.8em;border-radius:999px;letter-spacing:.01em;
+  box-shadow:0 10px 28px -8px rgba(240,176,74,.5);
+  transition:transform .15s ease, box-shadow .2s ease;
+}
+.btn:active{transform:scale(.96)}
+.btn.ghost{background:transparent;color:var(--cream);border:1.5px solid var(--line);
+  box-shadow:none;font-weight:600}
+.btn[disabled]{opacity:.32;pointer-events:none}
+
+/* ===========================================================================
+   WELCOME SCREEN
+   =========================================================================== */
+#welcome{align-items:center;justify-content:center;text-align:center;padding:6vh 6vw}
+#welcome .wrap{max-width:880px;display:flex;flex-direction:column;align-items:center;gap:1.4rem}
+#welcome .eq{height:34px;transform:scale(1.6);margin-bottom:.4rem}
+#welcome .eq span{width:4px}
+.kicker{font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.4em;
+  font-size:.8rem;color:var(--cream-dim)}
+#welcome h1{
+  font-family:var(--font-display);font-weight:900;line-height:.9;
+  font-size:clamp(3.5rem,11vw,9rem);letter-spacing:-.02em;
+  background:linear-gradient(180deg,#fff6e3,var(--amber) 120%);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  text-shadow:0 0 60px rgba(240,176,74,.25);
+}
+#welcome h1 em{font-style:italic;color:var(--red);-webkit-text-fill-color:var(--red)}
+.tagline{font-size:clamp(1.05rem,2.4vw,1.5rem);color:var(--cream-dim);max-width:620px;
+  font-weight:400;line-height:1.5}
+.langrow{display:flex;gap:.5rem;flex-wrap:wrap;justify-content:center;margin-top:.6rem}
+.langrow button{font-family:var(--font-mono);font-size:.8rem;letter-spacing:.1em;
+  text-transform:uppercase;padding:.5em 1.1em;border-radius:999px;border:1.5px solid var(--line);
+  color:var(--cream-dim);transition:all .2s}
+.langrow button.on{background:var(--cream);color:var(--ink);border-color:var(--cream)}
+#welcome .btn{margin-top:.8rem;font-size:1.2rem;padding:1.05em 2.4em}
+.flag-strip{position:absolute;top:0;left:0;right:0;height:5px;
+  background:linear-gradient(90deg,var(--red) 0 33%,#f5ecd9 33% 66%,#3a6ea5 66%)}
+
+/* ===========================================================================
+   MAP SCREEN
+   =========================================================================== */
+#map{padding:0}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;
+  padding:1.1rem clamp(1rem,3vw,2.4rem);border-bottom:1px solid var(--line);
+  background:linear-gradient(180deg,var(--ink-2),transparent)}
+.topbar .brand{display:flex;align-items:center;gap:.7rem}
+.topbar .brand .eq{height:16px}
+.topbar .brand b{font-family:var(--font-display);font-weight:900;font-size:1.3rem;letter-spacing:-.01em}
+.topbar .brand span{color:var(--red)}
+.toptools{display:flex;align-items:center;gap:.7rem}
+.counter{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.12em;color:var(--cream-dim);
+  text-transform:uppercase;display:flex;align-items:center;gap:.45em;
+  border:1px solid var(--line);padding:.5em .9em;border-radius:999px}
+.counter b{color:var(--amber);font-size:.95rem}
+.globe{width:42px;height:42px;border-radius:50%;border:1px solid var(--line);
+  display:grid;place-items:center;font-size:1.1rem}
+.btn.sm{padding:.7em 1.3em;font-size:.92rem}
+
+.stage{flex:1;position:relative;overflow:hidden}
+.maphint{position:absolute;top:1.3rem;left:50%;transform:translateX(-50%);text-align:center;z-index:4}
+.maphint .label{color:var(--cream-dim)}
+.maphint h2{font-family:var(--font-display);font-weight:600;font-size:clamp(1.3rem,3vw,2rem);
+  font-style:italic;margin-top:.2rem}
+
+/* the US map, scaled to fit the stage (frame matches the 1000x620 viewBox) */
+.mapframe{position:absolute;left:50%;top:53%;transform:translate(-50%,-50%);z-index:1}
+.usmap{width:100%;height:100%;display:block;overflow:visible}
+.usland{fill:url(#landglow);stroke:rgba(240,176,74,.6);stroke-width:2.5;stroke-linejoin:round;filter:url(#coastglow)}
+.route{fill:none;stroke:rgba(240,176,74,.32);stroke-width:1.6;vector-effect:non-scaling-stroke;
+  stroke-dasharray:4 8;stroke-linecap:round;animation:march 30s linear infinite}
+.dotgrid{position:absolute;inset:0;pointer-events:none;opacity:.5;
+  background-image:radial-gradient(rgba(245,236,217,.10) 1px,transparent 1px);
+  background-size:34px 34px;-webkit-mask-image:radial-gradient(120% 100% at 50% 50%,#000,transparent 78%);
+          mask-image:radial-gradient(120% 100% at 50% 50%,#000,transparent 78%)}
+
+@keyframes march{to{stroke-dashoffset:-400}}
+
+.node{position:absolute;z-index:5}
+.node .dot{position:absolute;left:0;top:0;transform:translate(-50%,-50%);
+  width:17px;height:17px;border-radius:50%;background:var(--rc,var(--amber));
+  box-shadow:0 0 0 5px color-mix(in srgb,var(--rc,var(--amber)) 24%,transparent),0 0 16px var(--rc,var(--amber));
+  transition:transform .2s}
+.node .dot::before{content:"";position:absolute;inset:-19px;border-radius:50%} /* enlarges touch target */
+.node .dot::after{content:"";position:absolute;inset:0;border-radius:50%;
+  border:2px solid var(--rc,var(--amber));opacity:.6;animation:ping 2.4s ease-out infinite}
+@keyframes ping{0%{transform:scale(1);opacity:.7}80%,100%{transform:scale(3);opacity:0}}
+.node .cap{position:absolute;left:0;top:15px;transform:translateX(-50%);
+  display:flex;flex-direction:column;align-items:center;gap:1px;white-space:nowrap;pointer-events:none}
+.node.top .cap{top:auto;bottom:15px}
+.node .ngenre{font-family:var(--font-display);font-size:.95rem;font-weight:600;color:var(--rc,var(--amber));
+  text-shadow:0 1px 10px rgba(0,0,0,.85),0 0 3px rgba(0,0,0,.7)}
+.node .nlabel{font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--cream);background:rgba(22,17,12,.72);padding:.2em .55em;border-radius:5px;backdrop-filter:blur(3px)}
+.node:active .dot{transform:translate(-50%,-50%) scale(1.3)}
+.node.picked .dot{background:#fff;
+  box-shadow:0 0 0 6px color-mix(in srgb,var(--rc) 45%,transparent),0 0 18px var(--rc)}
+
+/* ===========================================================================
+   REGION DETAIL
+   =========================================================================== */
+#detail{z-index:20;justify-content:flex-end}
+.scrim{position:absolute;inset:0;background:rgba(8,6,4,.55);backdrop-filter:blur(3px)}
+.sheet{position:relative;background:linear-gradient(180deg,var(--surface),var(--ink-2));
+  border-top:3px solid var(--rc,var(--amber));border-radius:28px 28px 0 0;
+  padding:clamp(1.6rem,4vw,2.8rem) clamp(1.4rem,5vw,3.4rem) clamp(1.6rem,4vw,2.6rem);
+  box-shadow:0 -30px 60px -20px rgba(0,0,0,.8);max-height:86%;overflow-y:auto;
+  animation:rise .45s cubic-bezier(.2,.9,.25,1)}
+@media(min-width:900px){
+  #detail{justify-content:center;align-items:center}
+  .sheet{max-width:760px;width:90%;border-radius:24px;border-top-width:4px}
+}
+@keyframes rise{from{transform:translateY(60px);opacity:0}to{transform:none;opacity:1}}
+.sheet .close{position:absolute;top:1.1rem;right:1.2rem;width:44px;height:44px;border-radius:50%;
+  background:rgba(255,255,255,.07);font-size:1.4rem;display:grid;place-items:center}
+.sheet .dmeta{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin-bottom:.5rem}
+.sheet .dmeta .label{color:var(--rc,var(--amber))}
+.sheet .era{font-family:var(--font-mono);font-size:.72rem;color:var(--muted);
+  border:1px solid var(--line);padding:.3em .7em;border-radius:999px}
+.sheet h2{font-family:var(--font-display);font-weight:900;line-height:.95;
+  font-size:clamp(2.4rem,7vw,4rem);letter-spacing:-.02em;margin:.1rem 0 .2rem}
+.sheet .city{font-family:var(--font-display);font-style:italic;font-size:1.2rem;color:var(--cream-dim);
+  margin-bottom:1.1rem}
+.sheet .story{font-size:clamp(1.05rem,2.2vw,1.28rem);line-height:1.55;color:var(--cream);max-width:60ch}
+.artists{display:flex;gap:.5rem;flex-wrap:wrap;margin:1.3rem 0}
+.artists .chip{font-size:.92rem;background:rgba(255,255,255,.06);border:1px solid var(--line);
+  padding:.5em 1em;border-radius:999px;color:var(--cream)}
+.thread{display:flex;gap:.8rem;align-items:flex-start;background:rgba(0,0,0,.25);
+  border-left:3px solid var(--rc,var(--amber));padding:1rem 1.2rem;border-radius:0 12px 12px 0;
+  margin:.4rem 0 1.6rem;max-width:62ch}
+.thread .gico{font-size:1.3rem;flex-shrink:0}
+.thread p{font-size:.98rem;line-height:1.5;color:var(--cream-dim)}
+.thread b{color:var(--cream);font-weight:600}
+.dactions{display:flex;gap:.8rem;flex-wrap:wrap}
+.btn.add{background:var(--rc,var(--amber));color:#1c130a;box-shadow:none}
+.btn.add.on{background:#fff;color:#1c130a}
+/* card music-sample player */
+.sampler{display:flex;align-items:center;gap:.8rem;flex-wrap:wrap;margin:.2rem 0 1.4rem}
+.sampler .btn.play{background:var(--rc,var(--amber));color:#1c130a;box-shadow:none;
+  font-size:.98rem;padding:.72em 1.35em}
+.sampler .btn.play.on{background:#fff}
+.samptitle{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--cream-dim)}
+body[dir="rtl"] .samptitle{letter-spacing:.02em}
+/* artist chips are tappable */
+.artists .chip{cursor:pointer;transition:border-color .15s,background .15s}
+.artists .chip::after{content:" ›";color:var(--rc,var(--amber));font-weight:700}
+.artists .chip:hover,.artists .chip:active{border-color:var(--rc,var(--amber));background:rgba(255,255,255,.11)}
+/* journey pagination row */
+.dnav{display:flex;align-items:center;justify-content:space-between;gap:.8rem;margin-bottom:1rem}
+.stepind{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;
+  color:var(--cream-dim);white-space:nowrap}
+/* artist popup */
+#artistLayer{position:absolute;inset:0;z-index:60;display:none;align-items:center;justify-content:center}
+#artistLayer.show{display:flex}
+#artistLayer .ascrim{position:absolute;inset:0;background:rgba(8,6,4,.72);backdrop-filter:blur(4px)}
+.acard{position:relative;z-index:1;display:flex;gap:1.6rem;flex-wrap:wrap;max-width:680px;width:92%;
+  background:linear-gradient(180deg,var(--surface),var(--ink-2));border:1px solid var(--line);
+  border-top:4px solid var(--rc,var(--amber));border-radius:22px;padding:1.9rem;box-shadow:var(--shadow);
+  max-height:86%;overflow-y:auto;animation:rise .4s cubic-bezier(.2,.9,.25,1)}
+.acard .close{position:absolute;top:1rem;right:1rem;width:40px;height:40px;border-radius:50%;
+  background:rgba(255,255,255,.07);font-size:1.3rem;display:grid;place-items:center;z-index:2}
+.aphoto{width:190px;height:190px;object-fit:cover;border-radius:16px;flex-shrink:0;background:var(--surface-2)}
+.ainfo{flex:1;min-width:220px}
+.ainfo h3{font-family:var(--font-display);font-weight:900;font-size:clamp(1.5rem,4vw,2.1rem);
+  line-height:1;margin-bottom:.6rem}
+.asong{margin:.1rem 0 .9rem}
+.asong .btn.play{background:var(--rc,var(--amber));color:#1c130a;box-shadow:none;font-size:.9rem;padding:.58em 1.05em}
+.asong .btn.play.on{background:#fff}
+.abio{font-size:1rem;line-height:1.55;color:var(--cream-dim)}
+.acredit{margin-top:1rem;font-family:var(--font-mono);font-size:.62rem;letter-spacing:.1em;
+  text-transform:uppercase;color:var(--muted)}
+body[dir="rtl"] .acard .close{right:auto;left:1rem}
+body[dir="rtl"] .artists .chip::after{content:" ‹"}
+
+/* ===========================================================================
+   TAKE-HOME / PLAYLIST SCREEN
+   =========================================================================== */
+#playlist{padding:0}
+.phead{padding:1.3rem clamp(1rem,3vw,2.4rem);border-bottom:1px solid var(--line);
+  display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.phead h2{font-family:var(--font-display);font-weight:900;font-size:clamp(1.6rem,4vw,2.6rem);letter-spacing:-.01em}
+.phead h2 em{font-style:italic;color:var(--amber)}
+.pbody{flex:1;display:grid;grid-template-columns:1fr;gap:0;overflow:hidden}
+@media(min-width:880px){.pbody{grid-template-columns:1.1fr .9fr}}
+.plist{overflow-y:auto;padding:clamp(1.2rem,3vw,2.2rem)}
+.plist .label{margin-bottom:.9rem}
+.ptab{display:flex;align-items:center;gap:1rem;width:100%;text-align:left;
+  background:var(--surface);border:1px solid var(--line);border-radius:16px;
+  padding:1rem 1.2rem;margin-bottom:.7rem;transition:all .2s}
+.ptab.on{border-color:var(--rc);background:var(--surface-2);box-shadow:0 0 0 1px var(--rc)}
+.ptab .swatch{width:14px;height:44px;border-radius:6px;background:var(--rc);flex-shrink:0}
+.ptab .pt-txt{flex:1}
+.ptab .pt-genre{font-family:var(--font-display);font-weight:600;font-size:1.25rem;line-height:1.1}
+.ptab .pt-city{font-family:var(--font-mono);font-size:.7rem;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--muted);margin-top:.2rem}
+.ptab .pt-go{color:var(--rc);font-size:1.4rem}
+.empty{color:var(--cream-dim);font-size:1.05rem;line-height:1.6;padding:1rem 0}
+
+.qrpane{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
+  padding:clamp(1.4rem,3vw,2.4rem);background:radial-gradient(80% 60% at 50% 30%,rgba(240,176,74,.10),transparent);
+  border-left:1px solid var(--line)}
+@media(max-width:879px){.qrpane{border-left:none;border-top:1px solid var(--line)}}
+.qrcard{background:var(--cream);padding:18px;border-radius:20px;box-shadow:var(--shadow);
+  transition:transform .3s}
+.qrcard img,.qrcard canvas{display:block;border-radius:6px}
+.qrgenre{font-family:var(--font-display);font-weight:900;font-size:clamp(1.5rem,3.4vw,2.2rem);
+  margin:1.1rem 0 .3rem;color:var(--qrc,var(--amber))}
+.qrpane p{color:var(--cream-dim);font-size:1rem;max-width:32ch;line-height:1.5}
+.qrpane .scan{display:flex;align-items:center;gap:.5rem;margin-top:1rem;font-family:var(--font-mono);
+  font-size:.74rem;letter-spacing:.14em;text-transform:uppercase;color:var(--amber)}
+.spoti{display:inline-flex;align-items:center;gap:.4em;margin-top:.4rem;color:var(--muted);font-size:.8rem}
+
+.footwrap{padding:1.1rem clamp(1rem,3vw,2.4rem);border-top:1px solid var(--line);
+  display:flex;justify-content:space-between;align-items:center;gap:1rem}
+.footwrap .note{font-size:.82rem;color:var(--muted);max-width:48ch;line-height:1.4}
+
+/* lang menu */
+#langmenu{position:absolute;inset:0;z-index:40;background:rgba(8,6,4,.7);backdrop-filter:blur(4px);
+  display:none;align-items:center;justify-content:center}
+#langmenu.show{display:flex}
+.langcard{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:2rem;
+  display:flex;flex-direction:column;gap:.6rem;min-width:260px}
+.langcard h3{font-family:var(--font-display);font-weight:600;margin-bottom:.5rem}
+.langcard button{padding:.8em 1.2em;border-radius:12px;border:1px solid var(--line);text-align:left;
+  font-size:1rem}
+.langcard button.on{background:var(--amber);color:#1c130a;border-color:var(--amber);font-weight:700}
+/* ===========================================================================
+   HEBREW / ARABIC — right-to-left support
+   =========================================================================== */
+body[lang="he"]{ --font-display:"Frank Ruhl Libre","Fraunces",serif; --font-body:"Heebo",system-ui,sans-serif; }
+body[lang="ar"]{ --font-display:"Cairo",sans-serif; --font-body:"Cairo",system-ui,sans-serif; }
+/* the mono "liner-note" face has no Hebrew/Arabic glyphs, so fall back to body */
+body[dir="rtl"]{ --font-mono:var(--font-body); }
+/* Hebrew tolerates light tracking; Arabic letters connect, so kill it entirely */
+body[dir="rtl"] .label,body[dir="rtl"] .kicker,body[dir="rtl"] .nlabel,body[dir="rtl"] .era,
+body[dir="rtl"] .pt-city,body[dir="rtl"] .scan,body[dir="rtl"] .counter,body[dir="rtl"] .footwrap .label{ letter-spacing:.04em; }
+body[lang="ar"] .label,body[lang="ar"] .kicker,body[lang="ar"] .nlabel,body[lang="ar"] .era,
+body[lang="ar"] .pt-city,body[lang="ar"] .scan,body[lang="ar"] .counter,body[lang="ar"] .footwrap .label{ letter-spacing:normal; }
+/* keep the geographic map + the English wordmark reading left-to-right */
+.stage,.brand{ direction:ltr; }
+body[dir="rtl"] .maphint{ direction:rtl; }
+/* mirror directional chrome for RTL */
+body[dir="rtl"] .pt-go{ transform:scaleX(-1); }
+body[dir="rtl"] .sheet .close{ right:auto; left:1.2rem; }
+body[dir="rtl"] .thread{ border-left:none; border-right:3px solid var(--rc,var(--amber)); border-radius:12px 0 0 12px; }
+@media(min-width:880px){ body[dir="rtl"] .qrpane{ border-left:none; border-right:1px solid var(--line); } }
+</style>
+</head>
+<body>
+<div class="flag-strip"></div>
+<div id="app">
+
+  <!-- ============================ WELCOME ============================ -->
+  <section class="screen active" id="welcome">
+    <div class="wrap">
+      <div class="eq"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="kicker" data-i18n="kicker">America 250 · 1776 – 2026</div>
+      <h1>American <em>Sound</em></h1>
+      <p class="tagline" data-i18n="tagline">You already know this music. Tonight, discover where it came from — and how the world made it together.</p>
+      <div class="langrow" id="langrow"></div>
+      <button class="btn" id="startBtn" data-i18n="start">Begin the journey →</button>
+    </div>
+  </section>
+
+  <!-- ============================ MAP ============================ -->
+  <section class="screen" id="map">
+    <div class="topbar">
+      <div class="brand">
+        <div class="eq"><span></span><span></span><span></span><span></span><span></span></div>
+        <b>American <span>Sound</span></b>
+      </div>
+      <div class="toptools">
+        <div class="counter"><span data-i18n="collected">Collected</span> <b id="count">0</b></div>
+        <button class="globe" id="globeBtn" title="Language">🌐</button>
+        <button class="btn sm" id="finishBtn" disabled data-i18n="finish">My mixtape →</button>
+      </div>
+    </div>
+    <div class="stage" id="stage">
+      <div class="dotgrid"></div>
+      <div class="maphint">
+        <div class="label" data-i18n="maphint">Tap a city to explore its sound</div>
+        <h2 data-i18n="maptitle">The map of American music</h2>
+      </div>
+      <div class="mapframe" id="mapframe">
+        <svg class="usmap" viewBox="0 0 1000 620" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <radialGradient id="landglow" cx="48%" cy="38%" r="78%">
+              <stop offset="0%" stop-color="#3c2d1c"/><stop offset="58%" stop-color="#2a2014"/>
+              <stop offset="100%" stop-color="#1d160d"/>
+            </radialGradient>
+            <filter id="coastglow" x="-15%" y="-15%" width="130%" height="130%">
+              <feDropShadow dx="0" dy="0" stdDeviation="7" flood-color="#f0b04a" flood-opacity="0.5"/>
+            </filter>
+          </defs>
+          <path class="usland" d="M52,108 L180,100 L330,94 L430,92 L470,96 L520,120 L560,128 L610,150 L660,128 L705,120 L760,108 L815,100 L860,95 L885,78 L900,104 L898,128 L915,156 L894,182 L905,212 L892,244 L876,280 L864,318 L852,348 L848,372 L854,408 L852,448 L842,486 L828,516 L816,486 L812,446 L806,410 L792,392 L752,388 L700,392 L648,398 L612,408 L590,396 L548,404 L505,420 L500,452 L478,484 L452,458 L430,440 L398,420 L366,402 L320,398 L230,394 L140,380 L112,358 L96,322 L104,286 L86,242 L80,196 L94,150 L68,120 Z"/>
+          <path class="route" id="routePath"/>
+        </svg>
+        <!-- city nodes injected here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================ DETAIL ============================ -->
+  <section class="screen" id="detail">
+    <div class="scrim" id="detailScrim"></div>
+    <div class="sheet" id="sheet"><!-- injected --></div>
+  </section>
+
+  <!-- ============================ PLAYLIST / TAKE HOME ============================ -->
+  <section class="screen" id="playlist">
+    <div class="phead">
+      <h2 data-i18n="yourmix">Your <em>American</em> mixtape</h2>
+      <button class="btn ghost sm" id="restartBtn" data-i18n="restart">↺ Start over</button>
+    </div>
+    <div class="pbody">
+      <div class="plist">
+        <div class="label" data-i18n="sounds">The sounds you collected</div>
+        <div id="ptabs"></div>
+        <div class="empty" id="emptyMsg" style="display:none" data-i18n="empty">You didn't tag any sounds — here's a sampler of all of American music to take home instead.</div>
+      </div>
+      <div class="qrpane">
+        <div class="qrcard" id="qrcard"></div>
+        <div class="qrgenre" id="qrGenre"></div>
+        <p id="qrSub" data-i18n="qrsub">Scan with your phone's camera to open this playlist on Spotify and take it home.</p>
+        <div class="scan"><span class="eq" style="height:14px"><span></span><span></span><span></span></span> <span data-i18n="scanme">Scan me</span></div>
+        <span class="spoti">▶ YouTube</span>
+      </div>
+    </div>
+    <div class="footwrap">
+      <div class="note" data-i18n="foot">A celebration of 250 years of American music — built from the sounds of the whole world.</div>
+      <div class="label">USA · 250</div>
+    </div>
+  </section>
+
+  <!-- ============================ LANG MENU ============================ -->
+  <div id="langmenu">
+    <div class="langcard">
+      <h3 data-i18n="choose">Choose a language</h3>
+      <div id="langmenuBtns"></div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+/* ===========================================================================
+   ⚙️  CONFIG — THE ONLY PART YOUR TEAM NEEDS TO EDIT
+   ---------------------------------------------------------------------------
+   For each region below, replace `spotify` with YOUR curated Spotify playlist
+   link (in the Spotify app: ⋯ → Share → Copy link to playlist). The QR code is
+   generated automatically from whatever link you paste. The placeholder links
+   below open a Spotify search for that genre so the demo works out of the box.
+   To add a language, copy a block inside STRINGS and translate the values.
+   =========================================================================== */
+const REGIONS = [
+  { id:"neworleans", x:606, y:398, color:"#e0a93c", genre:"Jazz", city:"New Orleans, Louisiana", era:"c. 1900", icon:"🎺",
+    story:"Born where African rhythms, brass-band marches, blues and Caribbean beats collided in the streets, jazz turned improvisation into an art form — and became America's first truly original music.",
+    artists:["Louis Armstrong","Jelly Roll Morton","Sidney Bechet"],
+    thread:"Its roots reach back to West Africa and the Caribbean — and within decades jazz had filled dance halls from Paris to Shanghai.",
+    spotify:"https://open.spotify.com/search/new%20orleans%20jazz" },
+
+  { id:"delta", x:596, y:360, color:"#3a8a93", genre:"The Blues", city:"Mississippi Delta", era:"c. 1910", icon:"🎸",
+    story:"In the cotton fields of the Delta, work songs and field hollers became the blues — three chords and the truth. Almost all American popular music traces back to this single sound.",
+    artists:["Robert Johnson","Muddy Waters","B.B. King"],
+    thread:"The blues crossed the Atlantic and lit the fuse for British rock — without it there is no Rolling Stones, no Led Zeppelin.",
+    spotify:"https://open.spotify.com/search/delta%20blues" },
+
+  { id:"memphis", x:612, y:322, labelPos:"top", color:"#c84b3c", genre:"Soul & Rock 'n' Roll", city:"Memphis, Tennessee", era:"1950s", icon:"⚡",
+    story:"At a tiny Memphis studio, blues, country and gospel fused into rock 'n' roll. A few streets away, Stax Records gave the world raw Southern soul.",
+    artists:["Elvis Presley","Otis Redding","Johnny Cash"],
+    thread:"Rock 'n' roll became the shared soundtrack of teenage rebellion on every continent.",
+    spotify:"https://open.spotify.com/search/memphis%20soul" },
+
+  { id:"nashville", x:676, y:318, color:"#c99a3f", genre:"Country & Bluegrass", city:"Nashville & Appalachia", era:"1920s", icon:"🪕",
+    story:"Scots-Irish ballads carried over the mountains met the African-American banjo to create country and bluegrass — American storytelling set to a fiddle and a steel guitar.",
+    artists:["Hank Williams","Dolly Parton","Bill Monroe"],
+    thread:"The banjo itself descends from West African instruments — country music is a true immigrant collaboration.",
+    spotify:"https://open.spotify.com/search/classic%20country%20bluegrass" },
+
+  { id:"detroit", x:700, y:165, color:"#a05ba0", genre:"Motown", city:"Detroit, Michigan", era:"1960s", icon:"💫",
+    story:"In a small house called “Hitsville U.S.A.,” Berry Gordy built a hit factory where Black American pop crossed over to the whole world — the Motown Sound.",
+    artists:["Stevie Wonder","The Supremes","Marvin Gaye"],
+    thread:"Motown's polished joy made it the first Black-owned music empire to top charts across the globe.",
+    spotify:"https://open.spotify.com/search/motown" },
+
+  { id:"chicago", x:615, y:178, labelPos:"top", color:"#4f74a8", genre:"Electric Blues & House", city:"Chicago, Illinois", era:"1940s / 1980s", icon:"🏙️",
+    story:"When Southern workers moved north in the Great Migration, they plugged the blues into amplifiers. Decades later, Chicago DJs invented house music on the same dance floors.",
+    artists:["Muddy Waters","Howlin' Wolf","Frankie Knuckles"],
+    thread:"House music travelled from Chicago to Ibiza and Berlin to become the heartbeat of global dance culture.",
+    spotify:"https://open.spotify.com/search/chicago%20blues%20house" },
+
+  { id:"newyork", x:876, y:205, color:"#e2792f", genre:"Hip-Hop", city:"New York City", era:"1973", icon:"🎤",
+    story:"At a Bronx block party a DJ stretched the drum break of a record, and a whole culture was born. Hip-hop — rapping, DJing, breakdancing, graffiti — grew into the world's dominant sound.",
+    artists:["DJ Kool Herc","Grandmaster Flash","The Notorious B.I.G."],
+    thread:"Today hip-hop is made in every language on Earth — from Lagos to Seoul to Paris.",
+    spotify:"https://open.spotify.com/search/classic%20hip%20hop" },
+
+  { id:"westcoast", x:125, y:338, color:"#dd6a78", genre:"Surf, Rock & West Coast Rap", city:"Los Angeles & California", era:"1960s / 1990s", icon:"🌴",
+    story:"California sold a dream: sun-soaked harmonies from the Beach Boys, the singer-songwriters of Laurel Canyon, and later the G-funk of West Coast hip-hop.",
+    artists:["The Beach Boys","Dr. Dre","Tupac Shakur"],
+    thread:"The “California sound” exported an image of freedom and sunshine that still shapes pop worldwide.",
+    spotify:"https://open.spotify.com/search/california%20west%20coast" },
+
+  { id:"seattle", x:115, y:126, color:"#6f9070", genre:"Grunge", city:"Seattle, Washington", era:"1990s", icon:"🌧️",
+    story:"In the rainy Pacific Northwest a generation turned punk energy and heavy riffs into grunge — raw, honest and anti-glamour.",
+    artists:["Nirvana","Pearl Jam","Soundgarden"],
+    thread:"Grunge gave 1990s youth everywhere a uniform of flannel and a feeling of authenticity.",
+    spotify:"https://open.spotify.com/search/grunge" },
+
+  { id:"texas", x:440, y:425, color:"#bf6c36", genre:"Tejano & Outlaw Country", city:"Texas", era:"various", icon:"🤠",
+    story:"On the border, Mexican and German traditions blended into Tejano. Elsewhere in Texas, rebels reinvented country and electrified the blues.",
+    artists:["Selena","Willie Nelson","Stevie Ray Vaughan"],
+    thread:"Tejano shows how the U.S.–Mexico border is one of the world's great musical meeting points.",
+    spotify:"https://open.spotify.com/search/tejano%20texas%20country" },
+];
+// order the snaking "tour" route is drawn in:
+const ROUTE = ["seattle","westcoast","texas","neworleans","delta","memphis","nashville","chicago","detroit","newyork"];
+
+// A "sampler" playlist used if a visitor collects nothing. Replace with yours:
+const SAMPLER = { genre:"American Sampler", city:"250 years of sound", color:"#f0b04a",
+  spotify:"https://open.spotify.com/search/american%20music%20history" };
+
+/* ---------------------------------------------------------------------------
+   THE ONE COMBINED MIXTAPE — every visitor's QR opens this single link.
+   ▼▼▼  SWAP `link` below for your curated YouTube playlist
+        (YouTube: Share → Copy link, e.g. youtube.com/playlist?list=…).  ▼▼▼
+   The default opens a reliable YouTube search so the QR works out of the box.
+   (Spotify SEARCH links were dropped — they open a BLANK page in the Spotify
+    phone app, a known bug — so the take-home QR now points at YouTube.)
+   --------------------------------------------------------------------------- */
+const MIXTAPE = { genre:"American Sound — The Mixtape", color:"#f0b04a",
+  link:"https://www.youtube.com/results?search_query=250+years+of+american+music" };
+
+/* ---------------------------------------------------------------------------
+   PERSONALIZED TAKE-HOME PAGE — the QR opens mixtape.html (bundled in this
+   folder) carrying the visitor's picks in the URL, so they get a page listing
+   THEIR genres + songs, each tappable to YouTube.
+   ▼▼▼  HOST mixtape.html once (drag it onto Netlify Drop, or GitHub Pages) and
+        paste its public URL below. Until you do, the QR safely falls back to
+        the generic YouTube link above, so nothing breaks.  ▼▼▼
+   --------------------------------------------------------------------------- */
+const TAKEHOME_URL = "https://rafiq-ssa.github.io/usa-250-mixtape/";
+
+/* ---------------------------------------------------------------------------
+   MUSIC SAMPLES — a free 30-second Apple Music preview per city, played inside
+   each card. `sample` is Apple's public preview URL (streams from Apple, so it
+   needs internet — the Play button auto-hides when offline). To change a track,
+   replace the pair below. For guaranteed OFFLINE audio, drop a local file into
+   an ./audio/ folder and point `sample` at it, e.g. "audio/neworleans.m4a".
+   --------------------------------------------------------------------------- */
+const SAMPLES = {
+  neworleans:{ sample:"assets/audio/city-neworleans.m4a", sampleTitle:"What a Wonderful World · Louis Armstrong" },
+  delta:{ sample:"assets/audio/city-delta.m4a", sampleTitle:"Mannish Boy · Muddy Waters" },
+  memphis:{ sample:"assets/audio/city-memphis.m4a", sampleTitle:"(Sittin' On) The Dock of the Bay · Otis Redding" },
+  nashville:{ sample:"assets/audio/city-nashville.m4a", sampleTitle:"Hey, Good Lookin' · Hank Williams" },
+  detroit:{ sample:"assets/audio/city-detroit.m4a", sampleTitle:"Baby Love · The Supremes" },
+  chicago:{ sample:"assets/audio/city-chicago.m4a", sampleTitle:"The Whistle Song · Frankie Knuckles" },
+  newyork:{ sample:"assets/audio/city-newyork.m4a", sampleTitle:"The Message · Grandmaster Flash & The Furious Five" },
+  westcoast:{ sample:"assets/audio/city-westcoast.m4a", sampleTitle:"Surfin' U.S.A. · The Beach Boys" },
+  seattle:{ sample:"assets/audio/city-seattle.m4a", sampleTitle:"Smells Like Teen Spirit · Nirvana" },
+  texas:{ sample:"assets/audio/city-texas.m4a", sampleTitle:"Como la Flor · Selena" },
+};
+
+/* ---------------------------------------------------------------------------
+   ARTIST DETAIL DATA — auto-built from Wikipedia (bio + photo) and iTunes
+   (hit song + 30-sec preview), all bundled locally under ./assets/ so it works
+   fully OFFLINE. Bio text: Source Wikipedia (CC BY-SA), credited in the popup.
+   To edit an artist, change their entry below (img/audio are local file paths).
+   --------------------------------------------------------------------------- */
+const ARTISTS = {
+  "Louis Armstrong":{img:"assets/img/louis-armstrong.jpg",song:"What a Wonderful World",audio:"assets/audio/louis-armstrong.m4a",bio:"Louis Daniel Armstrong, nicknamed \"Satchmo\", \"Satch\", and \"Pops\", was an American jazz and blues trumpeter and vocalist. Among the most influential figures in jazz, his career spanned five decades and several eras in the history of the genre."},
+  "Jelly Roll Morton":{img:"assets/img/jelly-roll-morton.jpg",song:"Black Bottom Stomp",audio:"assets/audio/jelly-roll-morton.m4a",bio:"Ferdinand Joseph LaMothe, known professionally as Jelly Roll Morton, was an American blues and jazz pianist, bandleader, and composer of Louisiana Creole descent."},
+  "Sidney Bechet":{img:"assets/img/sidney-bechet.jpg",song:"Si tu vois ma mère",audio:"assets/audio/sidney-bechet.m4a",bio:"Sidney Joseph Bechet was an American jazz saxophonist, clarinetist, and composer. He was one of the first important soloists in jazz, and first recorded several months before trumpeter Louis Armstrong."},
+  "Robert Johnson":{img:"assets/img/robert-johnson.jpg",song:"Cross Road Blues",audio:"assets/audio/robert-johnson.m4a",bio:"Robert Leroy Johnson was an American blues musician and songwriter. His singing, guitar playing and songwriting on his landmark 1936 and 1937 recordings have influenced later generations of musicians."},
+  "Muddy Waters":{img:"assets/img/muddy-waters.jpg",song:"Mannish Boy",audio:"assets/audio/muddy-waters.m4a",bio:"McKinley Morganfield, better known as Muddy Waters, was an American blues singer-songwriter and musician who was an important figure in the post-World War II blues scene, and is often cited as the \"father of modern Chicago blues\"."},
+  "B.B. King":{img:"assets/img/b-b-king.jpg",song:"The Thrill Is Gone",audio:"assets/audio/b-b-king.m4a",bio:"Riley B. King, known professionally as B. B. King, was an American blues guitarist, singer, songwriter, and record producer."},
+  "Elvis Presley":{img:"assets/img/elvis-presley.jpg",song:"Can't Help Falling In Love",audio:"assets/audio/elvis-presley.m4a",bio:"Elvis Aaron Presley was an American singer and actor. Referred to as the \"King of Rock and Roll\", he is widely regarded as one of the most culturally significant figures of the 20th century."},
+  "Otis Redding":{img:"assets/img/otis-redding.jpg",song:"(Sittin' On) The Dock of the Bay",audio:"assets/audio/otis-redding.m4a",bio:"Otis Ray Redding Jr. was an American singer and songwriter. He is regarded as one of the greatest singers in the history of American popular music and a seminal artist in soul music and rhythm and blues."},
+  "Johnny Cash":{img:"assets/img/johnny-cash.jpg",song:"Ring of Fire",audio:"assets/audio/johnny-cash.m4a",bio:"John R. Cash was an American singer-songwriter. Most of his music contains themes of sorrow, moral tribulation, and redemption, especially songs from the later stages of his career."},
+  "Hank Williams":{img:"assets/img/hank-williams.jpg",song:"Hey, Good Lookin'",audio:"assets/audio/hank-williams.m4a",bio:"Hiram \"Hank\" Williams was an American singer, songwriter, and musician. An early pioneer of country music, he is regarded as one of the most significant and influential musicians of the 20th century."},
+  "Dolly Parton":{img:"assets/img/dolly-parton.jpg",song:"Jolene",audio:"assets/audio/dolly-parton.m4a",bio:"Dolly Rebecca Parton is an American singer, songwriter, actress, philanthropist, and businesswoman."},
+  "Bill Monroe":{img:"assets/img/bill-monroe.jpg",song:"Blue Moon of Kentucky",audio:"assets/audio/bill-monroe.m4a",bio:"William Smith Monroe was an American mandolinist, singer, and songwriter who created the bluegrass music genre. For this reason, he is often called the \"Father of Bluegrass\"."},
+  "Stevie Wonder":{img:"assets/img/stevie-wonder.jpg",song:"Isn't She Lovely",audio:"assets/audio/stevie-wonder.m4a",bio:"Stevland Hardaway Morris, known professionally as Stevie Wonder, is an American singer-songwriter, musician, and record producer."},
+  "The Supremes":{img:"assets/img/the-supremes.jpg",song:"Baby Love",audio:"assets/audio/the-supremes.m4a",bio:"The Supremes were an American girl group formed in Detroit, Michigan, in 1959 as the Primettes."},
+  "Marvin Gaye":{img:"assets/img/marvin-gaye.jpg",song:"Distant Lover",audio:"assets/audio/marvin-gaye.m4a",bio:"Marvin Pentz Gaye Jr. was an American R&B and soul singer, songwriter, musician, and record producer. Commonly referred to as the \"Prince of Motown\" and \"Prince of Soul\", he helped to shape the sound of Motown and soul music in the 1960s and 1970s."},
+  "Howlin' Wolf":{img:"assets/img/howlin-wolf.jpg",song:"Smokestack Lightnin'",audio:"assets/audio/howlin-wolf.m4a",bio:"Chester Arthur Burnett, better known by his stage name Howlin' Wolf, was an American blues singer, guitarist and harmonica player."},
+  "Frankie Knuckles":{img:"assets/img/frankie-knuckles.jpg",song:"The Whistle Song",audio:"assets/audio/frankie-knuckles.m4a",bio:"Francis Warren Nicholls Jr., known professionally as Frankie Knuckles, was an American DJ, record producer, and remixer."},
+  "DJ Kool Herc":{img:"assets/img/dj-kool-herc.jpg",song:"No Disrespect",audio:"assets/audio/dj-kool-herc.m4a",bio:"Clive Campbell, better known by his stage name DJ Kool Herc, is a Jamaican-American DJ who is a pioneer of hip-hop music, where he along with others popularized it in the Bronx, New York City, in 1973. He is often referred to as the founder of hip hop."},
+  "Grandmaster Flash":{img:"assets/img/grandmaster-flash.jpg",song:"The Message (feat. Melle Mel & Duke Bootee)",audio:"assets/audio/grandmaster-flash.m4a",bio:"Joseph Robert Saddler, known by his stage name Grandmaster Flash, is a Barbadian-American DJ. He created a DJ technique called the Quick Mix Theory."},
+  "The Notorious B.I.G.":{img:"assets/img/the-notorious-b-i-g.jpg",song:"Big Poppa",audio:"assets/audio/the-notorious-b-i-g.m4a",bio:"Christopher George Latore Wallace, known professionally as the Notorious B.I.G. or Biggie Smalls, was an American rapper and songwriter."},
+  "The Beach Boys":{img:"assets/img/the-beach-boys.jpg",song:"Surfin' U.S.A.",audio:"assets/audio/the-beach-boys.m4a",bio:"The Beach Boys are an American rock band formed in Hawthorne, California, in 1961. The group's founding members consisted of brothers Brian, Dennis, and Carl Wilson, their cousin Mike Love, and their friend Al Jardine."},
+  "Dr. Dre":{img:"assets/img/dr-dre.jpg",song:"No Diggity (feat. Dr. Dre & Queen Pen)",audio:"assets/audio/dr-dre.m4a",bio:"Andre Romell Young, known professionally as Dr. Dre, is an American rapper, record producer, record executive, and actor. He is the founder and CEO of Aftermath Entertainment and Beats Electronics, and co-founder of Death Row Records."},
+  "Tupac Shakur":{img:"assets/img/tupac-shakur.jpg",song:"Playa Cardz Right (feat. 2Pac)",audio:"assets/audio/tupac-shakur.m4a",bio:"Tupac Amaru Shakur, also known by his stage names 2Pac and Makaveli, was an American rapper and actor. He was one of the most influential musical artists of the 20th century, and a prominent political activist for Black America."},
+  "Nirvana":{img:"assets/img/nirvana.jpg",song:"Smells Like Teen Spirit",audio:"assets/audio/nirvana.m4a",bio:"Nirvana was an American rock band formed in Aberdeen, Washington, in 1987."},
+  "Pearl Jam":{img:"assets/img/pearl-jam.jpg",song:"Black",audio:"assets/audio/pearl-jam.m4a",bio:"Pearl Jam is an American rock band formed in Seattle, Washington, in 1990."},
+  "Soundgarden":{img:"assets/img/soundgarden.jpg",song:"Black Hole Sun",audio:"assets/audio/soundgarden.m4a",bio:"Soundgarden was an American rock band formed in Seattle, Washington, in 1984 by singer and drummer Chris Cornell, lead guitarist Kim Thayil, and bassist Hiro Yamamoto."},
+  "Selena":{img:"assets/img/selena.jpg",song:"Como la Flor",audio:"assets/audio/selena.m4a",bio:"Selena Quintanilla-Pérez, known mononymously as Selena, was an American singer-songwriter, fashion designer and business owner."},
+  "Willie Nelson":{img:"assets/img/willie-nelson.jpg",song:"Mammas Don't Let Your Babies Grow up to Be Cowboys",audio:"assets/audio/willie-nelson.m4a",bio:"Willie Hugh Nelson is an American singer, guitarist, songwriter, actor, and activist. He was one of the main figures of the outlaw country subgenre that developed in the late 1960s as a reaction to the conservative restrictions of the Nashville sound."},
+  "Stevie Ray Vaughan":{img:"assets/img/stevie-ray-vaughan.jpg",song:"Pride and Joy",audio:"assets/audio/stevie-ray-vaughan.m4a",bio:"Stephen Ray Vaughan, also known abbreviated as SRV, was an American musician, best known as the guitarist and frontman of the blues rock trio Stevie Ray Vaughan and Double Trouble."},
+};
+
+/* ----- UI translations (chrome only; region stories stay in English here,
+         but you can translate them too by making `story` an object). -------- */
+const STRINGS = {
+  en:{ name:"English",
+    kicker:"America 250 · 1776 – 2026",
+    tagline:"You already know this music. Tonight, discover where it came from — and how the world made it together.",
+    start:"Begin the journey →", collected:"Collected", finish:"My mixtape →",
+    maphint:"Tap a city to explore its sound", maptitle:"The map of American music",
+    add:"♥ Add to my mixtape", added:"✓ Added — tap to remove", close:"Close",
+    yourmix:"Your American mixtape", restart:"↺ Start over", sounds:"The sounds you collected",
+    empty:"You didn't tag any sounds — here's a sampler of all of American music to take home instead.",
+    qrsub:"Scan to take your mixtape home — then tap any song to play it on YouTube.",
+    scanme:"Scan me", choose:"Choose a language",
+    foot:"A celebration of 250 years of American music — built from the sounds of the whole world.",
+    fact:"A global thread", origin:"Origin",
+    next:"Next stop", prev:"Previous", stepfmt:"Stop {n} of {t}",
+    sample:"▶ Play a taste", sampleStop:"⏸ Stop" },
+  he:{ name:"עברית",
+    kicker:"אמריקה 250 · 1776–2026",
+    tagline:"אתם כבר מכירים את המוזיקה הזו. הערב גַלּו מאיפה היא הגיעה — וכיצד העולם כולו יצר אותה יחד.",
+    start:"יוצאים למסע ←", collected:"נאספו", finish:"המיקסטייפ שלי ←",
+    maphint:"הקישו על עיר כדי לגלות את הצליל שלה", maptitle:"מפת המוזיקה האמריקאית",
+    add:"♥ הוספה למיקסטייפ שלי", added:"✓ נוסף — הקישו להסרה", close:"סגירה",
+    yourmix:"המיקסטייפ האמריקאי שלכם", restart:"↺ להתחיל מחדש", sounds:"הצלילים שאספתם",
+    empty:"לא סימנתם אף צליל — הנה מבחר מכל המוזיקה האמריקאית לקחת הביתה במקום.",
+    qrsub:"סרקו כדי לקחת את המיקסטייפ הביתה — ואז הקישו על כל שיר כדי לנגן אותו ב‑YouTube.",
+    scanme:"סרקו אותי", choose:"בחרו שפה",
+    foot:"חגיגה של 250 שנות מוזיקה אמריקאית — שנבנתה מצליליו של העולם כולו.",
+    fact:"חוט עולמי", origin:"מקור",
+    next:"התחנה הבאה", prev:"הקודמת", stepfmt:"תחנה {n} מתוך {t}",
+    sample:"▶ נגן טעימה", sampleStop:"⏸ עצור" },
+  ar:{ name:"العربية",
+    kicker:"أمريكا 250 · 1776–2026",
+    tagline:"أنت تعرف هذه الموسيقى بالفعل. الليلة، اكتشف من أين أتت — وكيف صنعها العالم معًا.",
+    start:"ابدأ الرحلة ←", collected:"المختارة", finish:"قائمتي ←",
+    maphint:"انقر على مدينة لاستكشاف صوتها", maptitle:"خريطة الموسيقى الأمريكية",
+    add:"♥ أضف إلى قائمتي", added:"✓ تمت الإضافة — انقر للإزالة", close:"إغلاق",
+    yourmix:"قائمتك الأمريكية", restart:"↺ ابدأ من جديد", sounds:"الأصوات التي جمعتها",
+    empty:"لم تختر أي صوت — إليك عيّنة من كل الموسيقى الأمريكية لتأخذها معك بدلاً من ذلك.",
+    qrsub:"امسح لأخذ قائمتك معك — ثم انقر على أي أغنية لتشغيلها على YouTube.",
+    scanme:"امسحني", choose:"اختر لغة",
+    foot:"احتفال بمرور 250 عامًا على الموسيقى الأمريكية — المبنية من أصوات العالم بأسره.",
+    fact:"رابط عالمي", origin:"الأصل",
+    next:"المحطة التالية", prev:"السابقة", stepfmt:"المحطة {n} من {t}",
+    sample:"▶ استمع لمقطع", sampleStop:"⏸ إيقاف" },
+};
+
+/* ===========================================================================
+   ENGINE  (no need to edit below for normal use)
+   =========================================================================== */
+const $=s=>document.querySelector(s);
+const byId=REGIONS.reduce((m,r)=>(m[r.id]=r,m),{});
+let lang="en";
+let picked=[];           // ordered list of region ids the visitor tagged
+let qrSel=null;          // which collected region's QR is showing
+const IDLE_MS=120000;    // auto-reset kiosk after 2 min idle
+let idleTimer;
+
+function t(k){ return (STRINGS[lang]&&STRINGS[lang][k]) || STRINGS.en[k] || k; }
+
+function applyLang(){
+  const rtl=(lang==="he"||lang==="ar");
+  document.documentElement.setAttribute("lang",lang);
+  document.documentElement.setAttribute("dir",rtl?"rtl":"ltr");
+  document.body.setAttribute("lang",lang);
+  document.body.setAttribute("dir",rtl?"rtl":"ltr");
+  document.querySelectorAll("[data-i18n]").forEach(el=>{ el.textContent=t(el.dataset.i18n); });
+  document.querySelectorAll(".langrow button,#langmenuBtns button").forEach(b=>b.classList.toggle("on",b.dataset.l===lang));
+  // refresh any open dynamic content
+  if($("#detail").classList.contains("active")&&currentRegion) openDetail(currentRegion.id,true);
+  if($("#playlist").classList.contains("active")) renderPlaylist();
+}
+
+/* ---- build language pickers ---- */
+function buildLangs(){
+  const row=$("#langrow"), menu=$("#langmenuBtns");
+  row.innerHTML=""; menu.innerHTML="";
+  Object.keys(STRINGS).forEach(code=>{
+    const a=document.createElement("button"); a.dataset.l=code; a.textContent=STRINGS[code].name;
+    a.onclick=()=>{lang=code;applyLang();}; row.appendChild(a);
+    const b=document.createElement("button"); b.dataset.l=code; b.textContent=STRINGS[code].name;
+    b.onclick=()=>{lang=code;applyLang();$("#langmenu").classList.remove("show");}; menu.appendChild(b);
+  });
+}
+
+/* ---- build the map ---- */
+function buildMap(){
+  const frame=$("#mapframe");
+  // the "tour" route through the cities, in map (viewBox) coordinates
+  const pts=ROUTE.map(id=>{const r=byId[id];return `${r.x},${r.y}`;});
+  $("#routePath").setAttribute("d","M"+pts.join(" L"));
+  // city nodes — positioned as % of the frame, which matches the 1000x620 viewBox
+  REGIONS.forEach(r=>{
+    const n=document.createElement("button");
+    n.className="node"+(r.labelPos==="top"?" top":""); n.dataset.id=r.id;
+    n.style.left=(r.x/1000*100)+"%"; n.style.top=(r.y/620*100)+"%";
+    n.style.setProperty("--rc",r.color);
+    n.innerHTML=`<span class="dot"></span><span class="cap">
+      <span class="ngenre">${r.genre}</span>
+      <span class="nlabel">${r.city.split(",")[0].split(" &")[0]}</span></span>`;
+    n.onclick=()=>openDetail(r.id);
+    frame.appendChild(n);
+  });
+  sizeMap();
+}
+// fit the map into the stage while preserving the US aspect ratio
+function sizeMap(){
+  const st=$("#stage"),f=$("#mapframe"); if(!st||!f)return;
+  const availW=st.clientWidth*0.94, availH=st.clientHeight*0.80, ar=1000/620;
+  let w=availW,h=w/ar; if(h>availH){h=availH;w=h*ar;}
+  f.style.width=w+"px"; f.style.height=h+"px";
+}
+window.addEventListener("resize",sizeMap);
+
+/* ---- one shared audio element for every 30-sec clip (city + artist) ---- */
+let sampleAudio=null, activePlayBtn=null;
+function stopSample(){
+  if(sampleAudio){ sampleAudio.pause(); sampleAudio.currentTime=0; }
+  if(activePlayBtn){ activePlayBtn.classList.remove("on");
+    activePlayBtn.textContent=activePlayBtn.dataset.idle||t('sample'); activePlayBtn=null; }
+}
+function toggleSample(src,btn){
+  if(!sampleAudio){ sampleAudio=new Audio(); sampleAudio.addEventListener("ended",stopSample); }
+  const wasThis=(activePlayBtn===btn);
+  stopSample();
+  if(wasThis) return;                         // second tap = pause
+  sampleAudio.src=src;
+  sampleAudio.onerror=()=>{ btn.style.display="none"; if(activePlayBtn===btn) activePlayBtn=null; };
+  sampleAudio.play().then(()=>{ activePlayBtn=btn; btn.classList.add("on"); btn.textContent=t('sampleStop'); })
+                    .catch(()=>{ /* blocked without a gesture — ignore */ });
+}
+
+/* ---- region detail sheet ---- */
+let currentRegion=null;
+function openDetail(id,keepOpen){
+  const r=byId[id]; currentRegion=r;
+  const on=picked.includes(id);
+  const smp=SAMPLES[id]||{};
+  stopSample();                               // stop any clip from the previous card
+  $("#sheet").style.setProperty("--rc",r.color);
+  const stepN=ROUTE.indexOf(id)+1, stepT=ROUTE.length;   // position on the tour
+  $("#sheet").innerHTML=`
+    <button class="close" id="closeSheet">✕</button>
+    <div class="dmeta"><span class="label">${r.icon} ${t('origin')} · ${r.city.split(',').slice(-1)[0].trim()}</span>
+      <span class="era">${r.era}</span></div>
+    <h2>${r.genre}</h2>
+    <div class="city">${r.city}</div>
+    <p class="story">${r.story}</p>
+    <div class="artists">${r.artists.map(a=>`<span class="chip" data-artist="${a}">${a}</span>`).join("")}</div>
+    ${smp.sample?`<div class="sampler"><button class="btn play" id="playBtn" data-idle="${t('sample')}">${t('sample')}</button>
+      <span class="samptitle">${smp.sampleTitle||""}</span></div>`:""}
+    <div class="thread"><span class="gico">🌍</span><p><b>${t('fact')}.</b> ${r.thread}</p></div>
+    <div class="dnav">
+      <button class="btn ghost sm" id="prevBtn" ${stepN<=1?'disabled':''}>← ${t('prev')}</button>
+      <span class="stepind">${t('stepfmt').replace('{n}',stepN).replace('{t}',stepT)}</span>
+      <button class="btn ghost sm" id="nextBtn" ${stepN>=stepT?'disabled':''}>${t('next')} →</button>
+    </div>
+    <div class="dactions">
+      <button class="btn add ${on?'on':''}" id="addBtn">${on?t('added'):t('add')}</button>
+      <button class="btn ghost" id="closeSheet2">${t('close')}</button>
+    </div>`;
+  $("#closeSheet").onclick=$("#closeSheet2").onclick=closeDetail;
+  $("#addBtn").onclick=()=>togglePick(id);
+  if(stepN>1){ const pv=$("#prevBtn"); if(pv) pv.onclick=()=>openDetail(ROUTE[stepN-2],true); }
+  if(stepN<stepT){ const nx=$("#nextBtn"); if(nx) nx.onclick=()=>openDetail(ROUTE[stepN],true); }
+  $("#sheet").querySelectorAll(".artists .chip").forEach(c=>{ c.onclick=()=>openArtist(c.dataset.artist); });
+  if(smp.sample){ const pb=$("#playBtn"); if(pb) pb.onclick=()=>toggleSample(smp.sample,pb); }
+  if(!keepOpen) show("detail");
+}
+function closeDetail(){ stopSample(); closeArtist(); $("#detail").classList.remove("active"); $("#map").classList.add("active"); }
+
+/* ---- artist popup: photo + hit song + short bio, all bundled locally ---- */
+function openArtist(name){
+  const a=ARTISTS[name]||{};
+  stopSample();
+  let lay=$("#artistLayer");
+  if(!lay){ lay=document.createElement("div"); lay.id="artistLayer"; document.getElementById("app").appendChild(lay); }
+  lay.style.setProperty("--rc",(currentRegion&&currentRegion.color)||"#f0b04a");
+  lay.innerHTML=`<div class="ascrim"></div>
+    <div class="acard">
+      <button class="close" id="aClose">✕</button>
+      ${a.img?`<img class="aphoto" src="${a.img}" alt="${name}">`:""}
+      <div class="ainfo">
+        <h3>${name}</h3>
+        ${a.song?`<div class="asong"><button class="btn play" id="aPlay" data-idle="▶ ${a.song}">▶ ${a.song}</button></div>`:""}
+        <p class="abio">${a.bio||""}</p>
+        <div class="acredit">Source: Wikipedia</div>
+      </div>
+    </div>`;
+  lay.classList.add("show");
+  $("#aClose").onclick=closeArtist;
+  lay.querySelector(".ascrim").onclick=closeArtist;
+  const ap=$("#aPlay");
+  if(ap){ if(a.audio) ap.onclick=()=>toggleSample(a.audio,ap); else ap.style.display="none"; }
+}
+function closeArtist(){ const lay=$("#artistLayer"); if(lay&&lay.classList.contains("show")){ stopSample(); lay.classList.remove("show"); } }
+$("#detailScrim").onclick=closeDetail;
+
+function togglePick(id){
+  const i=picked.indexOf(id);
+  if(i>=0) picked.splice(i,1); else picked.push(id);
+  // reflect on map node + counter + detail button
+  document.querySelectorAll(".node").forEach(n=>n.classList.toggle("picked",picked.includes(n.dataset.id)));
+  $("#count").textContent=picked.length;
+  $("#finishBtn").disabled=picked.length===0;
+  const on=picked.includes(id);
+  const b=$("#addBtn"); if(b){b.classList.toggle("on",on); b.textContent=on?t('added'):t('add');}
+}
+
+/* ---- playlist / take-home ---- */
+function renderPlaylist(){
+  const tabs=$("#ptabs"); tabs.innerHTML="";
+  const list = picked.length ? picked.map(id=>byId[id]) : [];
+  $("#emptyMsg").style.display = picked.length ? "none":"block";
+  if(picked.length){
+    list.forEach(r=>{
+      // the collected sounds are a recap only — the QR is always the one mixtape
+      const b=document.createElement("div");
+      b.className="ptab"; b.style.setProperty("--rc",r.color);
+      b.innerHTML=`<span class="swatch"></span><span class="pt-txt">
+        <span class="pt-genre">${r.genre}</span><span class="pt-city">${r.city}</span></span>`;
+      tabs.appendChild(b);
+    });
+  }
+  // personalized take-home QR: opens mixtape.html carrying THIS visitor's picks
+  const picks = picked.length ? picked : ["all"];
+  const url = TAKEHOME_URL.includes("REPLACE")
+      ? MIXTAPE.link                                    // safety fallback until hosted
+      : TAKEHOME_URL + "#" + picks.join(",");
+  drawQR(Object.assign({}, MIXTAPE, {link:url}));
+}
+function drawQR(r){
+  const card=$("#qrcard"); card.innerHTML="";
+  try{
+    new QRCode(card,{text:(r.link||r.spotify),width:240,height:240,colorDark:"#000000",colorLight:"#ffffff",
+      correctLevel:QRCode.CorrectLevel.H});
+  }catch(e){ card.innerHTML="<div style='color:#16110c;padding:40px;font-family:monospace'>QR offline</div>"; }
+  $("#qrGenre").textContent=r.genre; $("#qrGenre").style.setProperty("--qrc",r.color);
+  $(".qrpane").style.setProperty("--qrc",r.color);
+}
+
+/* ---- screen routing + idle reset ---- */
+function show(id){
+  document.querySelectorAll(".screen").forEach(s=>s.classList.remove("active"));
+  $("#"+id).classList.add("active");
+}
+function resetAll(){
+  stopSample();
+  picked=[]; qrSel=null; currentRegion=null;
+  document.querySelectorAll(".node").forEach(n=>n.classList.remove("picked"));
+  $("#count").textContent="0"; $("#finishBtn").disabled=true;
+  show("welcome");
+}
+function bumpIdle(){ clearTimeout(idleTimer); idleTimer=setTimeout(()=>{ if(!$("#welcome").classList.contains("active")) resetAll(); },IDLE_MS); }
+
+/* ---- wire up ---- */
+$("#startBtn").onclick=()=>{ show("map"); sizeMap(); };
+$("#finishBtn").onclick=()=>{ qrSel=picked[0]||null; renderPlaylist(); show("playlist"); };
+$("#restartBtn").onclick=resetAll;
+$("#globeBtn").onclick=()=>$("#langmenu").classList.add("show");
+$("#langmenu").onclick=e=>{ if(e.target.id==="langmenu") $("#langmenu").classList.remove("show"); };
+["pointerdown","keydown"].forEach(ev=>document.addEventListener(ev,bumpIdle));
+
+buildLangs(); buildMap(); applyLang(); bumpIdle();
+</script>
+</body>
+</html>
